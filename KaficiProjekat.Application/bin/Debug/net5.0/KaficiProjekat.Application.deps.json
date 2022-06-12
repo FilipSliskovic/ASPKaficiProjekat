@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "KaficiProjekat.Application/1.0.0": {
+        "dependencies": {
+          "KaficiProjekat.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KaficiProjekat.Application.dll": {}
+        }
+      },
+      "KaficiProjekat.Domain/1.0.0": {
+        "runtime": {
+          "KaficiProjekat.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KaficiProjekat.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KaficiProjekat.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

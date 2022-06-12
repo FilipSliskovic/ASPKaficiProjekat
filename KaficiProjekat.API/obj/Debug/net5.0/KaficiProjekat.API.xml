@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KaficiProjekat.API</name>
+    </assembly>
+    <members>
+        <member name="M:KaficiProjekat.API.Controllers.CafeController.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetCafeQuery)">
+            <summary>
+            Get Cafes. Only authorized can search.
+            </summary>
+            <response code="200">Successful query.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeController.Get(System.Int32,KaficiProjekat.Application.UseCases.Queries.IGetSingleCafeQuery)">
+            <summary>
+            Get a single Cafe. Only authorized can search.
+            </summary>
+            <response code="200">Successful query.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeController.Post(KaficiProjekat.Application.UseCases.DTO.CreateCafeDTO,KaficiProjekat.Application.UseCases.Commands.ICreateCafeCommand)">
+            <summary>
+            Create a Cafe. Only authorized can create.
+            </summary>
+            <response code="200">Successful creation.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if Cafe with that data already exists</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeController.Put(KaficiProjekat.Application.UseCases.DTO.CafeDTO,KaficiProjekat.Application.UseCases.Commands.IUpdateCafeCommand)">
+            <summary>
+            Update a Cafe. Only authorized can update.
+            </summary>
+            <response code="200">Successful update.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if Cafe with that data already exists</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteCafeCommand)">
+            <summary>
+            Delete Cafe. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if Cafe is linked with some posts.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeProductOrdersController.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetCafeProductOrdersQuery)">
+            <summary>
+            Get all products that are in orders. Only authorized can search.
+            </summary>
+            <response code="200">Successful query.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeProductOrdersController.Get(System.Int32,KaficiProjekat.Application.UseCases.Queries.IGetCafeProductOrderQuery)">
+            <summary>
+            Get a product from an order. Only authorized can search.
+            </summary>
+            <response code="200">Successful query.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeProductOrdersController.Post(KaficiProjekat.Application.UseCases.DTO.CreateCafeProductOrderDTO,KaficiProjekat.Application.UseCases.Commands.ICreateCafeProductOrderCommand)">
+            <summary>
+            Add a product to an order. Only authorized can add.
+            </summary>
+            <response code="201">Successful.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeProductOrdersController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteCafeProductOrderCommand)">
+            <summary>
+            Delete a product from an order. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if Cafe is linked with some posts.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeProductsController.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetCafeProductsQuery)">
+            <summary>
+            Add a Cafe's menu. Only authorized can search.
+            </summary>
+            <response code="201">Successful query.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeProductsController.Post(KaficiProjekat.Application.UseCases.DTO.CreateCafeProductDTO,KaficiProjekat.Application.UseCases.Commands.ICreateCafeProductCommand)">
+            <summary>
+            Add a product to cafe's menu. Only authorized can add.
+            </summary>
+            <response code="201">Successful.</response>
+            <response code="404">Product/Cafe Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if Cafe already has that product</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CafeProductsController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteCafeProductCommand)">
+            <summary>
+            Delete a product from cafe's menu. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CategoriesController.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetCategoriesQuery)">
+            <summary>
+            Get all categories. Only authorized can search.
+            </summary>
+            <response code="200">Successful query.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CategoriesController.Post(KaficiProjekat.API.DTO.CreateCategoryApiDto,KaficiProjekat.Application.UseCases.Commands.ICreateCategoryCommand)">
+            <summary>
+            Create a new category. Only authorized can create.
+            </summary>
+            <response code="201">Successful delete.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if Category already exists</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.CategoriesController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteCategoriesCommand)">
+            <summary>
+            Delete a category and all its products. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.OrdersController.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetOrdersQuery)">
+            <summary>
+            Gets all orders. Only authorized can search.
+            </summary>
+            <response code="200">Successful query.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.OrdersController.Get(System.Int32,KaficiProjekat.Application.UseCases.Queries.IGetOrderQuery)">
+            <summary>
+            Gets and order and makes a reciept. Only authorized make a reciept.
+            </summary>
+            <response code="200">Success.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.OrdersController.Post(KaficiProjekat.Application.UseCases.DTO.CreateOrderDTO,KaficiProjekat.Application.UseCases.Commands.ICreateOrderCommand)">
+            <summary>
+            Create a new Order. Only authorized can create.
+            </summary>
+            <response code="201">Successful create.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if Cafe is linked with some posts.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.OrdersController.Put(KaficiProjekat.Application.UseCases.DTO.UpdateOrderDTO,KaficiProjekat.Application.UseCases.Commands.IUpdateOrderCommand)">
+            <summary>
+            Update order. Only authorized can delete.
+            </summary>
+            <response code="200">Successful update.</response>
+            <response code="404">Order/table Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.OrdersController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteOrderCommand)">
+            <summary>
+            Delete an order and all its products. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.ProductsController.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetProductsQuery)">
+            <summary>
+            Get all products. Only authorized can search.
+            </summary>
+            <response code="200">Successful.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.ProductsController.Post(KaficiProjekat.API.DTO.CreateProductApiDTO,KaficiProjekat.Application.UseCases.Commands.ICreateProductCommand)">
+            <summary>
+            Create a new product. Only authorized can create.
+            </summary>
+            <response code="201">Successful.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">That product already exists</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.ProductsController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteProductCommand)">
+            <summary>
+            Delete a product. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.RegisterController.Post(KaficiProjekat.Application.UseCases.DTO.RegisterDTO)">
+            <summary>
+            Register new user and sends an email*. Everyone can register.
+            </summary>
+            <response code="201">Successful register.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if User already exists.</response>
+            <response code="500">Unexpected server error, email needs secure connection.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.ShiftsController.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetShiftsQuery)">
+            <summary>
+            Get all shifts. Only authorized can search.
+            </summary>
+            <response code="200">Successful.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.ShiftsController.Post(KaficiProjekat.Application.UseCases.DTO.CreateShiftDTO,KaficiProjekat.Application.UseCases.Commands.ICreateShiftCommand)">
+            <summary>
+            Create a new shift. Only authorized can create.
+            </summary>
+            <response code="201">Successful create.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if shift already exists</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.ShiftsController.Put(KaficiProjekat.Application.UseCases.DTO.ShiftDTO,KaficiProjekat.Application.UseCases.Commands.IUpdateShiftCommand)">
+            <summary>
+            Update a shift. Only authorized can update.
+            </summary>
+            <response code="200">Successful update.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if shift already exists</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.ShiftsController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteShiftCommand)">
+            <summary>
+            Delete a shift. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.SuperUsers.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetSuperUsersQuery)">
+            <summary>
+            Get all superusers. Only authorized can search.
+            </summary>
+            <response code="200">Successful.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if Cafe is linked with some posts.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.SuperUsers.Put(KaficiProjekat.Application.UseCases.DTO.UpdateSuperUserDTO,KaficiProjekat.Application.UseCases.Commands.IUpdateSuperUserCommand)">
+            <summary>
+            Take all superuser usecases. Only authorized can delete.
+            </summary>
+            <response code="200">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if user is already superuser.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.TableController.Post(KaficiProjekat.Application.UseCases.DTO.CreateTableDTO,KaficiProjekat.Application.UseCases.Commands.ICreateTableCommand)">
+            <summary>
+            Create a new table. Only authorized can create.
+            </summary>
+            <response code="201">Successful create.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if table already exists in that cafe.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.TableController.Put(KaficiProjekat.Application.UseCases.DTO.UpradeTableDTO,KaficiProjekat.Application.UseCases.Commands.IUpdateTableCommand)">
+            <summary>
+            Update a table. Only authorized can update.
+            </summary>
+            <response code="200">Successful update.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.TableController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteTableCommand)">
+            <summary>
+            Delete a table. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.TokenController.Post(KaficiProjekat.API.Controllers.TokenRequest)">
+            <summary>
+            Generate a new JWT. 
+            </summary>
+            <response code="200">Successful.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.UseCaseLogsController.Get(KaficiProjekat.Application.UseCases.UseCaseLogSearch,KaficiProjekat.Application.UseCases.Queries.IGetUseCaseLogsQuery)">
+            <summary>
+            Get usecase logs. Only authorized can search.
+            </summary>
+            <response code="200">Successful.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.UsersController.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetUsersQuery)">
+            <summary>
+            Get all users. Only authorized can search.
+            </summary>
+            <response code="200">Successful.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.UsersController.Get(System.Int32,KaficiProjekat.Application.UseCases.Queries.IGetUserQuery)">
+            <summary>
+            Get a single user. Only authorized can find.
+            </summary>
+            <response code="204">Successful get.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.UsersController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteUserCommand)">
+            <summary>
+            Delete User. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.WorkersCafeController.Get(KaficiProjekat.Application.UseCases.DTO.Searches.BasePagedSearch,KaficiProjekat.Application.UseCases.Queries.IGetWorkersQuery)">
+            <summary>
+            Get all workers and their shifts. Only authorized can delete.
+            </summary>
+            <response code="200">Successful.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.WorkersCafeController.Post(KaficiProjekat.Application.UseCases.DTO.CreateWorkersDTO,KaficiProjekat.Application.UseCases.Commands.ICreateWorkersCommand)">
+            <summary>
+            Create a new WhoWorksWhenAndWhere. Only authorized can create.
+            </summary>
+            <response code="201">Successful create.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+        <member name="M:KaficiProjekat.API.Controllers.WorkersCafeController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteWorkersCommand)">
+            <summary>
+            Delete Cafe. Only authorized can delete.
+            </summary>
+            <response code="204">Successful delete.</response>
+            <response code="404">Not found.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="409">Conflict if Cafe is linked with some posts.</response>
+            <response code="500">Unexpected server error.</response>
+        </member>
+    </members>
+</doc>

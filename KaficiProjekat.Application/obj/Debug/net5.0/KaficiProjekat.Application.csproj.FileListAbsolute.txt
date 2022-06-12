@@ -1,0 +1,15 @@
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\bin\Debug\net5.0\KaficiProjekat.Application.deps.json
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\bin\Debug\net5.0\KaficiProjekat.Application.dll
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\bin\Debug\net5.0\KaficiProjekat.Application.pdb
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\bin\Debug\net5.0\KaficiProjekat.Domain.dll
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\bin\Debug\net5.0\KaficiProjekat.Domain.pdb
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\KaficiProjekat.Application.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\KaficiProjekat.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\KaficiProjekat.Application.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\KaficiProjekat.Application.AssemblyInfo.cs
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\KaficiProjekat.Application.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\KaficiProjekat.Application.csproj.CopyComplete
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\KaficiProjekat.Application.dll
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\refint\KaficiProjekat.Application.dll
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\KaficiProjekat.Application.pdb
+C:\Users\PC\source\repos\KaficiProjekat\KaficiProjekat.Application\obj\Debug\net5.0\ref\KaficiProjekat.Application.dll
