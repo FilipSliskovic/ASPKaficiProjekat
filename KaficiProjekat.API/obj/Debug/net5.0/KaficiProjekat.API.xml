@@ -177,7 +177,7 @@
         </member>
         <member name="M:KaficiProjekat.API.Controllers.OrdersController.Delete(System.Int32,KaficiProjekat.Application.UseCases.Commands.IDeleteOrderCommand)">
             <summary>
-            Delete an order and all its products. Only authorized can delete.
+            Delete an order . Only authorized can delete.
             </summary>
             <response code="204">Successful delete.</response>
             <response code="404">Not found.</response>

@@ -15,4 +15,10 @@ namespace KaficiProjekat.Application.UseCases.DTO
        // public bool IsSuperUser { get; set; }
 
     }
+    public class UpdateUserDTO : RegisterDTO
+    {
+        public int Id { get; set; }
+        public IEnumerable<int> UseCaseIDs { get; set; }
+
+    }
 }
